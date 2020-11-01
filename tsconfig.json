@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "declaration": true,
+    "esModuleInterop": true,
+    "lib": ["es2019"],
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "outDir": "./dist",
+    "removeComments": true,
+    "strict": true,
+    "target": "es5"
+  },
+  "include": ["src/**/*", "src/split-names-list.d.ts"],
+  "exclude": ["node_modules/**/*"]
+}
