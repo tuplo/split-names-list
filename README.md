@@ -1,5 +1,14 @@
 # split-names-list
 
+<p>
+  <img src="https://img.shields.io/npm/v/@tuplo/split-names-list">
+  <a href="https://codecov.io/gh/tuplo/split-names-list">
+    <img src="https://codecov.io/gh/tuplo/split-names-list/branch/main/graph/badge.svg?token=YvgWdoXsL4" alt="test coverage">
+  </a>
+  <img src="https://github.com/tuplo/split-names-list/workflows/Build/badge.svg">
+  <img src="https://david-dm.org/tuplo/split-names-list.svg">
+</p>
+
 > Splits a list of people's names
 
 ## Usage

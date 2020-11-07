@@ -21,7 +21,22 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
       - run: npm ci
       - run: npm run lint
-      - run: npm run test
+      - run: npm run ci:test
+
+  test-coverage:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 14
+      - uses: actions/cache@v2
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+      - run: npm i --no-audit
+      - run: npm run ci:test:coverage
+      - uses: codecov/codecov-action@v1
 
   publish-to-npm:
     needs: build

@@ -37,9 +37,10 @@
   },
   "scripts": {
     "build": "bash scripts/build.sh",
+    "ci:test": "jest --ci",
+    "ci:test:coverage": "jest --ci --coverage",
     "lint": "eslint 'src/**'",
-    "test:watch": "jest --watch",
-    "test": "jest",
+    "test": "jest --watch",
     "ts-check": "tsc --noEmit"
   },
   "config": {
