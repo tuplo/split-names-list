@@ -19,7 +19,8 @@ const splitNamesList: SplitNamesListFn = (input, options) => {
   const { locale = 'en' } = options || {};
 
   const names = input
-    .split(/[^0-9a-z-. ]/i)
+    // non alphanumeric, space, dots, accents
+    .split(/[^0-9a-z-. \u00C0-\u00FF]/i)
     .map((part) => part.trim())
     .filter(Boolean)
     .flatMap((part) => sameFamilyName(part, { locale }))
