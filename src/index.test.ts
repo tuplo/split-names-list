@@ -4,13 +4,16 @@ import splitNamesList from '.';
 
 describe('split names list', () => {
   it.each([
+    [undefined, []],
+    [null, []],
+    [{ foo: 'bar' }, []],
     ['Jane Doe', ['Jane Doe']],
     ['Jane Doe, Jill Doe', ['Jane Doe', 'Jill Doe']],
     ['Jane Doe , Jill Doe', ['Jane Doe', 'Jill Doe']],
     ['Jane  Doe, Jill    Doe', ['Jane Doe', 'Jill Doe']],
     ['   Jane Doe, Jill Doe   ', ['Jane Doe', 'Jill Doe']],
   ])('normal formatted names - %s', (input, expected) => {
-    const result = splitNamesList(input);
+    const result = splitNamesList(input as string);
     expect(result).toStrictEqual(expected);
   });
 

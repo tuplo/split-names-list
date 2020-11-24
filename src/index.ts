@@ -8,11 +8,14 @@ type SplitNamesListOptions = Partial<{
 }>;
 
 type SplitNamesListFn = (
-  input: string,
+  input?: string | null,
   options?: SplitNamesListOptions
 ) => string[];
 
 const splitNamesList: SplitNamesListFn = (input, options) => {
+  if (!input) return [];
+  if (typeof input !== 'string') return [];
+
   const { locale = 'en' } = options || {};
 
   const names = input
