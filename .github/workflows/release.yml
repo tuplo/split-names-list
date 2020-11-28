@@ -5,25 +5,25 @@ on:
       - main
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [10.x, 12.x, 13.x]
+        node-version: [10.x, 12.x, 14.x]
     steps:
       - uses: actions/checkout@master
       - uses: actions/setup-node@v1
         with:
-          node-version: 13
+          node-version: 14
       - uses: actions/cache@v1
         with:
           path: node_modules
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
       - run: npm ci
-      - run: npm run lint
-      - run: npm run ci:test
+      - run: npm run validate
 
   test-coverage:
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
@@ -39,13 +39,13 @@ jobs:
       - uses: codecov/codecov-action@v1
 
   publish-to-npm:
-    needs: build
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
         with:
-          node-version: 13
+          node-version: 14
           registry-url: https://registry.npmjs.org/
       - run: npm ci
       - run: npm run build
