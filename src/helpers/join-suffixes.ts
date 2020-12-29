@@ -28,8 +28,8 @@ export const isSuffix: IsSuffixFn = (input) => {
 };
 
 type JoinSuffixesFn = (names: string[]) => string[];
-const joinSuffixes: JoinSuffixesFn = (names) => {
-  return names
+const joinSuffixes: JoinSuffixesFn = (names) =>
+  names
     .map((name) => name.trim())
     .filter(Boolean)
     .reduce((acc, name, i, list) => {
@@ -44,6 +44,5 @@ const joinSuffixes: JoinSuffixesFn = (names) => {
 
       return newAcc;
     }, [] as string[]);
-};
 
 export default joinSuffixes;
