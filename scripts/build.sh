@@ -1,9 +1,7 @@
 #!/usr/bin/env bash
 
 rimraf dist
-microbundle \
-  --target node \
-  --sourcemap false \
-  --format cjs,modern \
-  --tsconfig tsconfig.build.json
+tsc --build tsconfig.build.json
+esbuild src/index.ts --bundle --platform=node --outfile=dist/index.js
+esbuild src/index.ts --bundle --outfile=dist/index.modern.js
 cp src/split-names-list.d.ts dist/split-names-list.d.ts
