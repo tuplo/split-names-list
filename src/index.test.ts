@@ -1,4 +1,4 @@
-import { Locale } from './split-names-list.d';
+import type { Locale } from './split-names-list.d';
 
 import splitNamesList from '.';
 
