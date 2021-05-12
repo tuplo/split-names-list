@@ -12,6 +12,7 @@ describe('same family name', () => {
     ],
     ['same family', 'Jane and Jill Doe', 'en', ['Jane Doe', 'Jill Doe']],
   ])('joins same family names - %s', (_, input, locale, expected) => {
+    expect.assertions(1);
     const result = sameFamilyName(input, { locale });
     expect(result).toStrictEqual(expected);
   });

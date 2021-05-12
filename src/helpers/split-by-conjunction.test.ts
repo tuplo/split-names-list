@@ -6,6 +6,7 @@ describe('split-by-conjunction', () => {
     ['en', 'Jane Doe and Jill Dow', ['Jane Doe', 'Jill Dow']],
     ['pt', 'Jane Doe e Jill Dow', ['Jane Doe', 'Jill Dow']],
   ])('splits by conjunction - %s', (locale, input, expected) => {
+    expect.assertions(1);
     const result = splitByConjunction(input, { locale });
     expect(result).toStrictEqual(expected);
   });
