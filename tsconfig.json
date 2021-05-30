@@ -9,7 +9,7 @@
     "outDir": "./dist",
     "removeComments": true,
     "strict": true,
-    "target": "es5"
+    "target": "es6"
   },
   "include": ["src/**/*", "src/split-names-list.d.ts"],
   "exclude": ["node_modules/**/*"]

@@ -5,8 +5,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test:js": "node main",
-    "test:ts": "tsc --noEmit main",
+    "test:js": "node main-js",
+    "test:ts": "tsc --noEmit main-ts",
     "test": "yarn test:js && yarn test:ts"
   },
   "keywords": [],
