@@ -2,8 +2,11 @@
 
 <p>
   <img src="https://img.shields.io/npm/v/@tuplo/split-names-list">
-  <a href="https://codecov.io/gh/tuplo/split-names-list">
-    <img src="https://codecov.io/gh/tuplo/split-names-list/branch/main/graph/badge.svg?token=YvgWdoXsL4" alt="test coverage">
+  <a href="https://codeclimate.com/github/tuplo/split-names-list/maintainability">
+    <img src="https://api.codeclimate.com/v1/badges/be6d4e8edea51867d862/maintainability" />
+  </a>
+  <a href="https://codeclimate.com/github/tuplo/split-names-list/test_coverage">
+    <img src="https://api.codeclimate.com/v1/badges/be6d4e8edea51867d862/test_coverage" />
   </a>
   <img src="https://github.com/tuplo/split-names-list/workflows/Build/badge.svg">
   <img src="https://david-dm.org/tuplo/split-names-list.svg">
