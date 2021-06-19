@@ -8,7 +8,7 @@
   "keywords": [],
   "files": [
     "cjs/index.js",
-    "dist/index.js",
+    "dist/index.mjs",
     "dist/index.d.ts",
     "dist/split-names-list.d.ts"
   ],
