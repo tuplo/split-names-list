@@ -15,9 +15,18 @@
   "engines": {
     "node": ">=12"
   },
-  "type": "module",
-  "main": "./dist/index.js",
-  "exports": "./dist/index.js",
+  "main": "./cjs/index.js",
+  "module": "./dist/index.mjs",
+  "exports": {
+    ".": [
+      {
+        "import": "./dist/index.mjs",
+        "require": "./cjs/index.js",
+        "default": "./cjs/index.js"
+      },
+      "./dist/index.mjs"
+    ]
+  },
   "types": "dist/index.d.ts",
   "devDependencies": {
     "@types/jest": "26.0.23",
