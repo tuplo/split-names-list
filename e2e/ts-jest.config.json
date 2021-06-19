@@ -1,8 +1,5 @@
 {
   "transform": {
     "^.+\\.[jt]s$": "ts-jest"
-  },
-  "moduleNameMapper": {
-    "split-names-list$": "<rootDir>/node_modules/@tuplo/split-names-list/cjs"
   }
 }
