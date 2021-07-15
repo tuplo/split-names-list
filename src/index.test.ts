@@ -13,6 +13,8 @@ describe('split names list', () => {
     ['Jane  Doe, Jill    Doe', ['Jane Doe', 'Jill Doe']],
     ['   Jane Doe, Jill Doe   ', ['Jane Doe', 'Jill Doe']],
     ['Javier Fernández Vázquez', ['Javier Fernández Vázquez']],
+    ['Jack O’Connell', ['Jack O’Connell']],
+    ["Jack O'Connell", ["Jack O'Connell"]],
   ])('normal formatted names - %s', (input, expected) => {
     const result = splitNamesList(input as string);
     expect(result).toStrictEqual(expected);
