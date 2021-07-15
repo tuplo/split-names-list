@@ -65,8 +65,7 @@
     ],
     "transform": {
       "^.+\\.(t|j)sx?$": "ts-jest"
-    },
-    "testEnvironment": "node"
+    }
   },
   "eslintConfig": {
     "extends": [
@@ -90,11 +89,12 @@
       "jest": true
     },
     "rules": {
+      "@typescript-eslint/comma-dangle": "off",
       "import/extensions": "off",
-      "import/prefer-default-export": "off",
       "import/no-unresolved": "off",
+      "import/prefer-default-export": "off",
       "jest/no-hooks": "off",
-      "@typescript-eslint/comma-dangle": "off"
+      "jest/prefer-expect-assertions": "off"
     },
     "overrides": [
       {
