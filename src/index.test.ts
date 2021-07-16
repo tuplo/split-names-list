@@ -15,6 +15,7 @@ describe('split names list', () => {
     ['Javier Fernández Vázquez', ['Javier Fernández Vázquez']],
     ['Jack O’Connell', ['Jack O’Connell']],
     ["Jack O'Connell", ["Jack O'Connell"]],
+    ['Ahmir "Questlove" Thompson', ['Ahmir "Questlove" Thompson']],
   ])('normal formatted names - %s', (input, expected) => {
     const result = splitNamesList(input as string);
     expect(result).toStrictEqual(expected);

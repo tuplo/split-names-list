@@ -18,7 +18,7 @@ function splitNamesList(
 
   const names = input
     // non alphanumeric, space, dots, accents
-    .split(/[^0-9a-z-.’' \u00C0-\u00FF]/i)
+    .split(/[^0-9a-z-.’'" \u00C0-\u00FF]/i)
     .map((part) => part.trim())
     .filter(Boolean)
     .flatMap((part) => sameFamilyName(part, { locale }))
