@@ -9,11 +9,4 @@ describe('split-by-conjunction', () => {
     const result = splitByConjunction(input, { locale });
     expect(result).toStrictEqual(expected);
   });
-
-  it("throws if a locale isn't yet supported", () => {
-    const expected = 'Locale "xx" not supported';
-    expect(() =>
-      splitByConjunction('Jane Doe', { locale: 'xx' as Locale })
-    ).toThrow(expected);
-  });
 });

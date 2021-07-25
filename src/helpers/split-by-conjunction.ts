@@ -12,8 +12,9 @@ type SplitByConjunctionFn = (
 
 const splitByConjunction: SplitByConjunctionFn = (input, options) => {
   const { locale = 'en' } = options || {};
-  const conjunctions = conjunctionsPerLocale[locale];
+  const conjunctions = conjunctionsPerLocale(locale);
   if (!conjunctions) throw new Error(`Locale "${locale}" not supported`);
+
   const rgConjunctions = new RegExp(
     conjunctions.map((conjunction) => `\\b${conjunction}\\b`).join('|'),
     'i'
