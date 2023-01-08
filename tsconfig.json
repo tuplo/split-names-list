@@ -3,14 +3,15 @@
     "baseUrl": "./",
     "declaration": true,
     "esModuleInterop": true,
-    "lib": ["es2019"],
+    "lib": ["dom"],
     "module": "commonjs",
     "moduleResolution": "node",
     "outDir": "./dist",
     "removeComments": true,
     "strict": true,
-    "target": "es6"
+    "target": "es2019",
+    "types": ["vitest/globals"]
   },
-  "include": ["src/**/*", "src/split-names-list.d.ts"],
+  "include": ["src/**/*"],
   "exclude": ["node_modules/**/*"]
 }

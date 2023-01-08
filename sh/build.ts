@@ -8,9 +8,7 @@ async function main() {
 	await $`esbuild src/index.ts --bundle --platform=node --format=cjs --outfile=dist/index.cjs`;
 	await $`esbuild src/index.ts --bundle --platform=node --format=esm --outfile=dist/index.mjs`;
 
-	// node12 compatibility
-	await $`mkdir cjs`;
-	await $`cp dist/index.cjs cjs/index.js`;
+	await $`cp src/split-names-list.d.ts dist`;
 }
 
 main();
