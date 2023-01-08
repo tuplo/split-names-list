@@ -1,1 +1,1 @@
-export type Locale = 'de' | 'en' | 'es' | 'es' | 'fr' | 'it' | 'pt';
+export type ILocale = "de" | "en" | "es" | "es" | "fr" | "it" | "pt";
