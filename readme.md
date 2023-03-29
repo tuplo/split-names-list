@@ -1,4 +1,4 @@
-# split-names-list
+# @tuplo/split-names-list
 
 Splits a list of people's names.
 
@@ -11,7 +11,6 @@ Splits a list of people's names.
     <img src="https://api.codeclimate.com/v1/badges/be6d4e8edea51867d862/test_coverage" />
   </a>
   <img src="https://github.com/tuplo/split-names-list/workflows/Build/badge.svg">
-  <img src="https://david-dm.org/tuplo/split-names-list.svg">
 </p>
 
 ## Usage
