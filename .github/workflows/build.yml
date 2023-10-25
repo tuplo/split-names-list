@@ -9,10 +9,10 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [14.x, 16.x, 18.x]
+        node-version: [16.x, 18.x, 20.x]
     steps:
-      - uses: actions/checkout@master
-      - uses: actions/cache@v1
+      - uses: actions/checkout@main
+      - uses: actions/cache@main
         with:
           path: node_modules
           key: ${{ runner.os }}-node-${{ hashFiles('**/yarn.lock') }}
@@ -26,10 +26,10 @@ jobs:
     name: test-coverage
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
-      - uses: actions/setup-node@master
+      - uses: actions/checkout@main
+      - uses: actions/setup-node@main
         with:
-          node-version: 18
+          node-version: 20
       - uses: actions/cache@v1
         with:
           path: node_modules
@@ -46,10 +46,10 @@ jobs:
     needs: test
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
+      - uses: actions/checkout@main
+      - uses: actions/setup-node@main
         with:
-          node-version: 18
+          node-version: 20
           registry-url: https://registry.npmjs.org/
       - run: yarn install --frozen-lockfile
       - run: yarn build
