@@ -10,9 +10,9 @@ function getFamilyName(name: string) {
 	return familyName;
 }
 
-interface ISameFamilyNameOptions {
+type ISameFamilyNameOptions = {
 	locale?: ILocale;
-}
+};
 
 export function sameFamilyName(
 	input: string,

@@ -1,9 +1,9 @@
 import type { ILocale } from "../split-names-list.d";
 import { conjunctionsPerLocale } from "./conjunctions";
 
-interface ISplitByConjunctionOptions {
+type ISplitByConjunctionOptions = {
 	locale: ILocale;
-}
+};
 
 export function splitByConjunction(
 	input: string,

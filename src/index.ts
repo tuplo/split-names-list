@@ -3,9 +3,9 @@ import { sameFamilyName } from "./helpers/same-family-name";
 import { splitByConjunction } from "./helpers/split-by-conjunction";
 import type { ILocale } from "./split-names-list.d";
 
-interface ISplitNamesListOptions {
+type ISplitNamesListOptions = {
 	locale: ILocale;
-}
+};
 
 function splitNamesList(
 	input?: string | null,
